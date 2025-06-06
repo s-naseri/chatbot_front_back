@@ -1,0 +1,350 @@
+@font-face {
+  font-family: 'IRANYekanX';
+  src: url('/public/fonts/IRANYekanX-Regular.woff2') format('woff2'),
+       url('/public/fonts/IRANYekanX-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANYekanX';
+  src: url('/public/fonts/IRANYekanX-Bold.woff2') format('woff2'),
+       url('/public/fonts/IRANYekanX-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body, html, #root {
+  font-family: 'IRANYekanX', sans-serif !important;
+  direction: rtl;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f7f8fa;
+}
+
+/* بقیه استایل‌ها بدون تغییر، فقط اطمینان از font-family */
+.chat-container,
+.chat-header,
+.chat-title,
+.chat-main,
+.chat-bubble,
+.chat-footer,
+.chat-input,
+.send-btn,
+.form-container,
+.input-label,
+.input,
+.gender-group,
+.btn,
+.form-footer,
+.link-btn,
+.error {
+  font-family: 'IRANYekanX', sans-serif !important;
+}
+
+
+
+
+/* اعمال فونت ایران یکان به کل صفحه */
+html, body, #root {
+  font-family: 'IRANYekanX' !important;
+  direction: rtl; /* اگر زبان فارسی است */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  background: #f7f8fa;
+  font-family: 'IranYekanX';
+  direction: rtl;
+  margin: 0;
+  padding: 0;
+}
+
+.chat-container {
+  max-width: 480px;
+  height: 95vh;
+  margin: 18px auto;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 8px 32px rgba(0,0,80,0.09);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1.5px solid #e5eaf6;
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 24px 10px 24px;
+  border-bottom: 1px solid #f0f2f5;
+  background: #fff;
+}
+
+.logo-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #eaf0fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(30,44,80,0.07);
+}
+.chat-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: #fff;
+}
+.chat-title {
+  color: #1c448e;
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: 'IranYekanX';
+}
+
+.chat-main {
+  flex: 1;
+  padding: 18px 16px 8px 16px;
+  overflow-y: auto;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chat-bubble {
+  max-width: 80%;
+  padding: 10px 16px;
+  border-radius: 14px;
+  font-size: 1.07rem;
+  line-height: 1.8;
+  margin-bottom: 2px;
+  font-family: 'IranYekanX';
+  word-break: break-word;
+  box-shadow: 0 1px 6px rgba(44,44,80,0.04);
+}
+.chat-bubble.user {
+  background: #f3f7fa;
+  color: #1c448e;
+  align-self: flex-end;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 14px;
+}
+.chat-bubble.bot {
+  background: #eaf0fa;
+  color: #263c5e;
+  align-self: flex-start;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 14px;
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 7px;
+  animation: blink 1s steps(1) infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1 }
+  50% { opacity: 0 }
+}
+
+.chat-footer {
+  background: #fff;
+  padding: 14px 18px 18px 18px;
+  border-top: 1px solid #f0f2f5;
+}
+
+.chat-input-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.icon-btn {
+  background: none;
+  border: none;
+  margin: 0 2px;
+  padding: 0 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background 0.15s;
+  border-radius: 8px;
+  height: 36px;
+}
+.icon-btn:hover {
+  background: #f3f7fa;
+}
+.icon-btn svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1.5px solid #e5eaf6;
+  font-size: 1rem;
+  background: #f7f8fa;
+  color: #1c448e;
+  font-family: 'IranYekanX';
+  outline: none;
+  direction: rtl;
+  text-align: right;
+  transition: border 0.2s;
+}
+.chat-input:focus {
+  border-color: #1c448e;
+}
+.send-btn {
+  background: #1c448e;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-family: 'IranYekanX';
+  font-weight: bold;
+  font-size: 1.08rem;
+  padding: 0 18px;
+  cursor: pointer;
+  transition: background 0.2s;
+  height: 36px;
+}
+.send-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .chat-container {
+    max-width: 100vw;
+    height: 100vh;
+    margin: 0;
+    border-radius: 0;
+  }
+  .chat-header, .chat-footer {
+    padding: 10px 5px;
+  }
+  .chat-main {
+    padding: 10px 4px 4px 4px;
+  }
+}
+
+
+ 
+.form-container {
+  max-width: 400px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 32px 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,80,0.08);
+  text-align: right;
+  font-family: 'IranYekanX'
+}
+
+.input-label {
+  display: block;
+  font-weight: 600;
+  color: #1c448e;
+  margin-bottom: 8px;
+  font-family: 'IranYekanX';
+}
+
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #bcd2ee;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 4px;
+  background: #fff;
+  direction: rtl;
+  text-align: right;
+  font-family: 'IranYekanX';
+}
+
+.gender-group {
+  margin: 12px 0;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px 0;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  background: #1c448e;
+  color: #fff;
+  font-family: 'IranYekanX';
+  margin-top: 12px;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: #263c5e;
+  font-family: 'IranYekanX'
+}
+
+.form-footer {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #263c5e;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-direction: row-reverse;
+  font-family: 'IranYekanX'
+}
+
+.link-btn {
+  color: #1c448e;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0;
+  margin: 0 3px;
+  font-family: 'IranYekanX';
+}
+
+.error {
+  color: #c0392b;
+  background: #f8d7da;
+  padding: 8px;
+  border-radius: 8px;
+  margin-top: 8px;
+  font-size: 0.97rem;
+  text-align: right;
+  font-family: 'IranYekanX'
+  
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    max-width: 98vw;
+    margin: 18px 1vw;
+    padding: 18px 6px;
+    border-radius: 14px;
+  }
+}
+
+/* بقیه کدهای CSS شما بدون تغییر */

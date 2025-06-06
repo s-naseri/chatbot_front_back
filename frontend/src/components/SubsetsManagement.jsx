@@ -1,0 +1,16 @@
+// src/components/SubsetsManagement.jsx
+import React from "react";
+
+export default function SubsetsManagement() {
+  return (
+    <div style={{
+      background: "#fff",
+      padding: 24,
+      borderRadius: 12,
+      boxShadow: "0 2px 8px rgba(113,111,243,0.07)"
+    }}>
+      <h3 style={{ color: "#716ff3", marginBottom: 16 }}>مدیریت زیرمجموعه‌ها</h3>
+      <p>در این بخش می‌توانید اهداف و مدیریت زیرمجموعه‌ها را در آینده اضافه کنید.</p>
+    </div>
+  );
+}
